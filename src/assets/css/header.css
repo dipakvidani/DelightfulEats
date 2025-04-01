@@ -1,0 +1,8 @@
+input::placeholder {
+    color: white; /* Change placeholder text color to white */
+}
+
+
+.form-control::placeholder {
+    color: white;
+}

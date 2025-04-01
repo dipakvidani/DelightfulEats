@@ -1,0 +1,27 @@
+.hover-text-warning:hover {
+  color: #ffc107 !important;
+  transition: color 0.3s ease;
+}
+
+.hover-bg-warning:hover {
+  background-color: #ffc107 !important;
+  transition: background-color 0.3s ease;
+}
+
+.social-icons a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.app-icons .btn {
+  transition: all 0.3s ease;
+}
+
+.app-icons .btn:hover {
+  background-color: #ffc107;
+  color: #212529 !important;
+}

@@ -1,0 +1,216 @@
+.recipe-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 245, 230, 0.95); /* Warm peach background */
+    z-index: 9999;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .loader-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+  }
+  
+  /* Ingredients Animation - Brighter Colors */
+  .ingredients {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 30px;
+    position: relative;
+    height: 80px;
+  }
+  
+  .ingredient {
+    position: absolute;
+    border-radius: 50%;
+    animation: float 4s infinite ease-in-out;
+  }
+  
+  .tomato {
+    width: 30px;
+    height: 30px;
+    background: #FF5349; /* Vibrant tomato red */
+    left: 20%;
+    top: 0;
+    animation-delay: 0s;
+    box-shadow: 0 0 0 3px rgba(255, 83, 73, 0.4);
+  }
+  
+  .onion {
+    width: 35px;
+    height: 35px;
+    background: #F8F3FF; /* Bright white with purple tint */
+    left: 40%;
+    top: 10px;
+    animation-delay: 0.5s;
+    box-shadow: 0 0 0 3px rgba(248, 243, 255, 0.4);
+  }
+  
+  .herb {
+    width: 25px;
+    height: 25px;
+    background: #3CB371; /* Vibrant herb green */
+    left: 60%;
+    top: 5px;
+    animation-delay: 1s;
+    box-shadow: 0 0 0 3px rgba(60, 179, 113, 0.4);
+  }
+  
+  .spice {
+    width: 20px;
+    height: 20px;
+    background: #FFA500; /* Bright orange */
+    left: 80%;
+    top: 15px;
+    animation-delay: 1.5s;
+    box-shadow: 0 0 0 3px rgba(255, 165, 0, 0.4);
+  }
+  
+  /* Cooking Pot - More Vibrant Metal */
+  .cooking-pot {
+    position: relative;
+    width: 100px;
+    height: 80px;
+    margin-bottom: 30px;
+  }
+  
+  .pot-body {
+    width: 100px;
+    height: 60px;
+    background: #B0C4DE; /* Light steel blue */
+    border-radius: 0 0 20px 20px;
+    position: relative;
+    z-index: 1;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  .pot-top {
+    width: 120px;
+    height: 20px;
+    background: #778899; /* Light slate gray */
+    border-radius: 10px;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    z-index: 2;
+  }
+  
+  /* Steam Animation - More Visible */
+  .steam {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 40px;
+  }
+  
+  .steam-particle {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    filter: blur(5px);
+    animation: steamRise 3s infinite ease-out;
+  }
+  
+  .s1 {
+    width: 15px;
+    height: 15px;
+    left: 10px;
+    animation-delay: 0s;
+  }
+  
+  .s2 {
+    width: 20px;
+    height: 20px;
+    left: 40px;
+    animation-delay: 0.5s;
+  }
+  
+  .s3 {
+    width: 12px;
+    height: 12px;
+    left: 70px;
+    animation-delay: 1s;
+  }
+  
+  /* Text Styles - More Vibrant */
+  .loading-text {
+    font-size: 1.4rem;
+    color: #D35400; /* Pumpkin orange */
+    font-weight: 600;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  }
+  
+  .dot {
+    opacity: 0;
+    animation: dotPulse 1.5s infinite;
+    color: #E74C3C; /* Bright red */
+  }
+  
+  .dot:nth-child(1) {
+    animation-delay: 0s;
+  }
+  .dot:nth-child(2) {
+    animation-delay: 0.5s;
+  }
+  .dot:nth-child(3) {
+    animation-delay: 1s;
+  }
+  
+  .cooking-tip {
+    font-size: 1rem;
+    color: #16A085; /* Greenish teal */
+    text-align: center;
+    line-height: 1.5;
+    font-style: italic;
+    max-width: 280px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    animation: tipFade 4s infinite;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  /* Animations - Same as before */
+  @keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(5deg); }
+  }
+  
+  @keyframes steamRise {
+    0% { 
+      transform: translateY(0) scale(1);
+      opacity: 0.8;
+    }
+    100% { 
+      transform: translateY(-50px) scale(1.5);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes dotPulse {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+  
+  @keyframes tipFade {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0.5; }
+  }
