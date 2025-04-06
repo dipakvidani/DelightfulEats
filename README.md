@@ -52,9 +52,17 @@ DelightfulEats/
 
 ## 📸 Screenshots
 
-| Home Page | Recipe Details | Favorites |
-|-----------|----------------|-----------|
+### Main Views
+
+| Home Page | Recipe Details (Top) | Recipe Details (Bottom) |
+|-----------|----------------------|--------------------------|
 | ![](./public/screenshot1.png) | ![](./public/screenshot2.png) | ![](./public/screenshot3.png) |
+
+### Additional Features
+
+| Favorites Page | About Us Page | Recipe Submission |
+|----------------|----------------|-------------------|
+| ![](./public/screenshot4.png) | ![](./public/screenshot6.png) | ![](./public/screenshot5.png) |
 
 ---
 
