@@ -12,8 +12,7 @@ const Crousel = ({ recipes }) => {
             interval={3000}
             pause={false}
             indicators={recipes.length > 1} // Only show indicators if more than 1 item
-            controls={recipes.length > 1} // Only show controls if more than 1 item
-            className="recipe-carousel"
+            controls={recipes.length > 1}
             aria-label="Recipe carousel"
         >
             {recipes.length > 0 ? (
